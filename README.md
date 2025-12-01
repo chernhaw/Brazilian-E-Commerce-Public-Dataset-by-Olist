@@ -11,8 +11,11 @@ This project demonstrates how to:
 ------------------------------------------------------------------------
 ## 1. Set Up Environment
 
-### Step 1: conda env create -f eltn file path
-------------------------------------------------------------------------
+### Step 1: 
+```
+conda env create -f eltn file path
+
+```
 ------------------------------------------------------------------------
 ## 2. Generate Kaggle API Key
 
