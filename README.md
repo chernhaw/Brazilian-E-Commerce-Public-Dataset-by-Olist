@@ -249,7 +249,32 @@ meltano run tap-csv target-bigquery
 ## 13. Verify in BigQuery
 
 ``` sql
-SELECT COUNT(*) FROM ecommerce.olist_customers;
+SELECT 
+  'olist_customers' AS table_name, COUNT(*) AS total_rows FROM ecommerce.olist_customers
+UNION ALL
+SELECT 
+  'olist_geolocation', COUNT(*) FROM ecommerce.olist_geolocation
+UNION ALL
+SELECT 
+  'olist_order_items', COUNT(*) FROM ecommerce.olist_order_items
+UNION ALL
+SELECT 
+  'olist_order_payments', COUNT(*) FROM ecommerce.olist_order_payments
+UNION ALL
+SELECT 
+  'olist_order_reviews', COUNT(*) FROM ecommerce.olist_order_reviews
+UNION ALL
+SELECT 
+  'olist_orders', COUNT(*) FROM ecommerce.olist_orders
+UNION ALL
+SELECT 
+  'olist_products', COUNT(*) FROM ecommerce.olist_products
+UNION ALL
+SELECT 
+  'olist_sellers', COUNT(*) FROM ecommerce.olist_sellers
+UNION ALL
+SELECT 
+  'product_category_name_translation', COUNT(*) FROM ecommerce.product_category_name_translation;
 ```
 
 ------------------------------------------------------------------------
