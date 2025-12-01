@@ -9,20 +9,7 @@ This project demonstrates how to:
 ✅ Prepare for dbt transformations
 
 ------------------------------------------------------------------------
-
-## 1. Create a Git Repository
-
-In your project root:
-
-``` bash
-git init
-git add .
-git commit -m "Initial Kaggle → BigQuery project"
-```
-
-------------------------------------------------------------------------
-
-## 2. Generate Kaggle API Key
+## 1. Generate Kaggle API Key
 
 ### Step 1: Login to Kaggle
 
