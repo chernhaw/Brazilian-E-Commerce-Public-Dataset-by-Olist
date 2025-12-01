@@ -210,7 +210,14 @@ meltano run tap-csv target-bigquery
 
 ------------------------------------------------------------------------
 
-## 12. Verify in BigQuery
+## 12. Verify in BigQuery match with CSV
+Verify CSV Files Locally (Row & Column Counts) with [check_all_csvs.py](). 
+
+Run from terminal:
+``` bash
+python download_kaggle.py
+```
+
 
 ``` sql
 SELECT 
