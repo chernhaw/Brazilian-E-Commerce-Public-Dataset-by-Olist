@@ -131,7 +131,7 @@ meltano add loader target-bigquery
 ------------------------------------------------------------------------
 
 ## 10. Configure `meltano.yml`
-
+# find meltano.yml then paste below plugins & loaders into it and save
 ``` yaml
 plugins:
   extractors:
