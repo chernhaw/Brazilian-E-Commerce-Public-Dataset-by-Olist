@@ -31,7 +31,7 @@ Click: ✅ **Create New API Token**
 
 ## 3. Setup Kaggle API in Jupyter Notebook
 
-### Option A (Recommended): Use `.env` file
+### Use `.env` file
 
 Create `.env`:
 
@@ -50,19 +50,6 @@ GITHUB_TOKEN=xxxxx
 # BigQuery
 GCP_PROJECT_ID=xxxx
 GOOGLE_APPLICATION_CREDENTIALS=xxxxxx json file path
-```
-
-### Load in Jupyter:
-
-``` python
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-print(os.getenv("KAGGLE_USERNAME"))
-print(os.getenv("KAGGLE_KEY"))
-```
 
 ------------------------------------------------------------------------
 
@@ -80,7 +67,7 @@ __pycache__/
 
 ------------------------------------------------------------------------
 
-## 5. Download Kaggle CSVs Using Python (Jupyter Notebook)
+## 5. Download Kaggle CSVs Using Python
 
 ``` python
 import kagglehub
@@ -140,16 +127,7 @@ Download file and store it safely:
 
 ------------------------------------------------------------------------
 
-## 7. Setup BigQuery Credentials in Jupyter
-
-``` python
-import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/youruser/project/bq-key.json"
-```
-
-------------------------------------------------------------------------
-
-## 8. Initialize Meltano
+## 7. Initialize Meltano
 
 ``` bash
 meltano init meltano_kaggle_csv
@@ -158,7 +136,7 @@ cd meltano_kaggle_csv
 
 ------------------------------------------------------------------------
 
-## 9. Add CSV Extractor
+## 8. Add CSV Extractor
 
 ``` bash
 meltano add extractor tap-csv
@@ -166,7 +144,7 @@ meltano add extractor tap-csv
 
 ------------------------------------------------------------------------
 
-## 10. Add BigQuery Loader
+## 9. Add BigQuery Loader
 
 ``` bash
 meltano add loader target-bigquery
@@ -174,7 +152,7 @@ meltano add loader target-bigquery
 
 ------------------------------------------------------------------------
 
-## 11. Configure `meltano.yml`
+## 10. Configure `meltano.yml`
 
 ``` yaml
 plugins:
@@ -246,7 +224,7 @@ plugins:
 
 ------------------------------------------------------------------------
 
-## 12. Run the Pipeline
+## 11. Run the Pipeline
 
 ``` bash
 meltano run tap-csv target-bigquery
@@ -254,7 +232,7 @@ meltano run tap-csv target-bigquery
 
 ------------------------------------------------------------------------
 
-## 13. Verify in BigQuery
+## 12. Verify in BigQuery
 
 ``` sql
 SELECT 
